@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    label {
+      display: inline-block;
+      width: 80px;
+      color: blue;
+      text-align: right;
+    }
+    span {
+      width: 40px;
+      color: orange;
+    }
+    h1{
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+<form action="" style="width: 400px">
+  <fieldset style="border: 20px solid #33CCFF">
+    <h1 style="background: red; color: white; text-align: center; margin: 5px 0;">Sở thích của bạn</h1>
+    <label for="yourname" id="yourname">Họ và tên:</label>
+    <input type="text" name="yourname"> <br>
+    <label for="email" id="email">Email:</label>
+    <input type="text" name="email"> <br>
+    <label for="hobby" id="hobby">Sở thích:</label>
+    <input type="checkbox" name="hobby"><span>Thể thao</span>
+    <input type="checkbox" name="hobby"><span>Âm nhạc</span>
+    <input type="checkbox" name="hobby"><span>Đọc sách</span>
+    <input type="checkbox" name="hobby"><span>Lướt web</span>
+    <input type="checkbox" name="hobby"><span>Chơi game</span>
+    <input type="checkbox" name="hobby"><span>Điện ảnh</span>
+    <input type="checkbox" name="hobby"><span>Du lịch</span>
+    <br>
+    <input style="margin-left: 85px" type="submit" value="Gửi thông tin">
+    <input type="reset" value="Nhập lại">
+  </fieldset>
+</form>
+
+<div style="background-color: yellow; width: 400px; ">
+  <h1 style="background-color: darkseagreen; color: blue; text-align: center">Đăng ký học viên</h1>
+  <form action="">
+    <label for="name" id="name">Họ và tên:</label>
+    <input type="text" name="name"><br>
+    <label for="birthday" id="birthday">Ngày sinh:</label>
+    <input type="text" name="birthday"><br>
+    <label for="gender" id="gender">Ngày sinh:</label>
+    <input type="radio" name="gender">Nam
+    <input type="radio" name="gender">Nữ <br>
+    <label for="address" id="address">Địa chỉ:</label>
+    <textarea name="address"></textarea> <br>
+    <label for="class">Lớp</label>
+    <select id="class" name="class">
+      <option>--Chọn lớp--</option>
+    </select> <br>
+    <label for="email">Email</label>
+    <input type="text" name="email"><br>
+    <label for="phone">Điện thoại</label>
+    <input type="text" name="phone" id="phone"> <br>
+    <input style="margin-left: 85px" type="submit" value="Đăng ký">
+    <input type="reset" value="Nhập lại">
+  </form>
+</div>
+
+</body>
+</html>
