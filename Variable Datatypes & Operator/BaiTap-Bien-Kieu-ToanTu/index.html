@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ly = parseInt(prompt("Nhập điểm lý:"));
+        let hoa = parseInt(prompt("Nhập điểm hóa:"));
+        let sinh = parseInt(prompt("Nhập điểm sinh:"));
+        let tong = ly + hoa + sinh;
+
+        document.write("Điểm trung bình 3 môn là: " + tong/3 + "<br />");
+        document.write("Tổng điểm ba môn là: " + tong + "<br />");
+
+        let nhiet = parseInt(prompt("Nhập nhiệt độ cần đổi:"));
+        document.write("Nhiệt độ F tương ứng của: " + nhiet + " độ C là: " + ((nhiet * 9)/5 + 32) + "<br />");
+
+        let r = parseInt(prompt("Nhập bán kính:"));
+        document.write("Diện tích hình tròn có bán kính là: " + r + " là: " + (r * r * 3.14) + "<br />");
+        document.write("Chu vi hình tròn có bán kính là: " + r + " là: " + (r * 2 * 3.14) + "<br />");
+
+    </script>
+</body>
+</html>

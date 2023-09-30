@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Amount</td>
+            <td>From Currency</td>
+            <td>To Currency</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="tien">
+            </td>
+            <td>
+                <select name="vietnam" id="befor">
+                    <option value="vietnam">Việt Nam</option>
+                    <option value="usd">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="vietnam" id="after">
+                    <option value="usd">USD</option>
+                    <option value="vietnam">Việt Nam</option>
+                </select>
+            </td>
+            <td>
+                <button id="convert">Convert</button>
+            </td>
+        </tr>
+    </table>
+
+    <p id="result" style="color: blue;"></p>
+
+    <script src="doiTien.js"></script>
+</body>
+</html>
