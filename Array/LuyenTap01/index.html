@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // Bài 1
+    let bai1 = [4,6,2,10,2,5,6,10,98,10];
+    let count1 = 0;
+    for (let i = 0; i < bai1.length; i++) {
+        if(bai1[i] === 10){
+            count1 += 1;
+        }
+    }
+    document.write(`Bài 1: Mảng đã cho có: ${count1} số 10; <br />`)
+
+    // Bài 2
+    let bai2 = [4,6,2,10,2,5,6,10,98,10];
+    let max2 = bai2[0];
+    let index2 = 0;
+    for (let i = 1; i < bai2.length; i++) {
+        if(max2 < bai2[i]){
+            max2 = bai2[i];
+            index2 = i;
+        }
+    }
+    document.write(`Bài 2: Giá trị lớn nhâ của mảng: ${max2} năm ở vị trí ${index2}; <br />`)
+
+    // Bài 3
+    let bai3 = [4,6,2,10,2,5,6,10,98,10];
+    let max3 = bai3[0];
+    let sum3 = 0;
+    for (let i = 1; i < bai3.length; i++) {
+        sum3 += bai3[i];
+        if(max3 < bai3[i]){
+            max3 = bai3[i];
+        }
+    }
+    document.write(`Bài 3: Giá trị lớn nhâ của mảng: ${max3}. Giá trị TB của mảng: ${sum3/bai3.length}; <br />`)
+
+    // Bài 4
+    let bai4 = [4,6,2,10,2,5,6,10,98,10];
+    document.write("Bài 4: Mảng ban đầu: " + bai4 + " ");
+    for (let i = 0; i < bai4.length/2; i++) {
+        let temp = bai4[i];
+        bai4[i] = bai4[bai4.length - 1 - i];
+        bai4[bai4.length- 1 - i] = temp;
+    }
+    document.write("Mảng sau khi đảo ngược: " + bai4 + ";<br />");
+
+    // Bài 5
+    let bai5 = [-4,6,-2,10,-2,5,-6,10,-98,-10];
+    let count5 = 0;
+    for (let i = 0; i < bai5.length; i++) {
+        if(bai5[i] < 0) {
+            count5 += 1;
+        }
+    }
+    document.write(`Bài 5: Số số nguyên âm trong mảng: ${count5}; <br />`)
+
+    // Bài 6
+    let bai6 = [4,6,2,10,2,5,6,10,98,10];
+    let flag6 = 0;
+    let v6 = 10;
+    for (let i = 0; i < bai6.length; i++) {
+        if(bai6[i] === v6){
+            flag6 = 1;
+            break;
+        }
+    }
+
+    if(flag6 === 1) {
+        document.write(`Bài 6: ${v6} is in the array; <br />`)
+    } else {
+        document.write(`Bài 6: ${v6} is not in the array; <br />`)
+    }
+
+    // Bài 7
+    let bai7 = [4,6,2,10,2,5,6,10,98,10];
+    let v7 = 10;
+    let index7;
+    for (let i = 0; i < bai7.length; i++) {
+        if(bai7[i] === v7){
+            index7 = i;
+            break;
+        }
+    }
+    for (let i = index7; i < bai7.length - 1; i++) {
+        bai7[i] = bai7[i+1];
+    }
+    bai7[bai7.length - 1] = 0;
+    document.write(`Bài 7: Mảng kết quả: ${bai7};<br />`);
+
+    // Bài 8
+    let bai8 = [4,6,2,10,2,5,6,10,98,10];
+    document.write("Bài 8: Mảng ban đầu: " + bai8 + ";<br />");
+    bai8.sort(function(a, b) {
+        return b - a;
+    });
+    document.write("Bài 8: Mảng sau khi xắp sếp: " + bai8 + ";<br />");
+
+    // Bài 9
+    let a = [4,62,24,105,26,53,62,160,978,810];
+    let b = [43,6,2,10,2,5,6,10,98,10];
+    let c = [];
+    for (let i = 0; i < 20; i++) {
+        if(i < a.length) {
+            c[i] = a[i];
+        } else {
+            c[i] = b[i - a.length];
+        }
+    }
+    document.write("Bài 9: Mảng c sau khi được nối từ mảng a và b: " + c + "; ");
+
+</script>
+</body>
+</html>

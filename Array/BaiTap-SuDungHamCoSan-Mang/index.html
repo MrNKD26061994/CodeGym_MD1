@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mang</title>
+</head>
+<body>
+<script>
+  // Bài 1
+  let myColor = ["Red", "Green", "White", "Black"];
+  document.write(myColor.toString() + '<br/>')
+  document.write(myColor.join() + '<br />')
+
+  // Bài 2
+  let number = prompt('Nhập số: ');
+  let temp = number.split('');
+  for (let i = 0; i < temp.length; i++) {
+    if(i>0 && Number(temp[i - 1]) % 2 == 0 && Number(temp[i]) % 2 == 0) {
+      document.write(" - ");
+    }
+    document.write(temp[i]);
+  }
+  document.write('<br />')
+
+  // Bài 3
+  let str = prompt('Nhập chuỗi: ');
+  let upper = str.toUpperCase();
+  let lower = str.toLowerCase();
+  for (let i = 0; i < str.length; i++) {
+    if(str.split('')[i] == upper.split('')[i]) {
+      document.write(lower[i]);
+    } else {
+      document.write(upper[i]);
+    }
+  }
+</script>
+</body>
+</html>

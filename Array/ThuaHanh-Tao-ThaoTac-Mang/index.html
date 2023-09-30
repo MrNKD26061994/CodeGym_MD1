@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Sample Screan:</h1>
+    <input type="text" id="txtValue" />
+    <button onclick="add()">Add</button>
+    <button onclick="display()">Display</button>
+    <p id="result"></p>
+    <script>
+        let array = Array();
+        function add() {
+            array.push(document.getElementById('txtValue').value);
+            document.getElementById('txtValue').value = '';
+        }
+
+        function display() {
+            // array.forEach(element => document.write(element + '; '));
+            let e = "<hr />";
+            for (let i = 0; i < array.length; i++) {
+                e += "Element " + i + " là: " + array[i] +"<br />";
+            }
+            document.getElementById('result').innerHTML = e;
+        }
+    </script>
+</body>
+</html>

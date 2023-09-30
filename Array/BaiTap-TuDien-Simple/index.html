@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label id="str" for="str">Nhập từ</label>
+<input id="inputText" type="text">
+<button onclick="translatText()">Dịch</button>
+<h1 id="outputText"></h1>
+
+<script>
+  let english = ['Apple', 'Banana'];
+  let vietNam = ['Táo', 'Chuối'];
+  function translatText() {
+    let str = document.getElementById('inputText').value.toLowerCase();
+    let outputText = document.getElementById('outputText');
+    let flag = -1;
+
+    for (let i = 0; i < english.length; i++) {
+        if (str == english[i].toLowerCase()) {
+            flag = i;
+            break;
+        }
+    }
+
+    if(flag !== -1) {
+        outputText.innerHTML = vietNam[flag];
+    } else {
+        outputText.innerHTML = "Không tìm thấy";
+    }
+  }
+</script>
+</body>
+</html>
