@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  let numbers = +prompt("Nhập n số nguyên tố đầu tiên:")
+  let count = 1;
+  let result = '2; ';
+  let x = 2;
+    if(numbers<=1){
+        if (numbers ===1) {
+            result = '2.';
+        } else {
+            result = '';
+        }
+    } else {
+        while(count < numbers) {
+            let sqrtX = Math.ceil(Math.sqrt(x));
+            for(let i = 2; i <= sqrtX; i++) {
+                if (x % i === 0) {
+                    x++;
+                    break;
+                }
+                if (i === sqrtX) {
+                    if (count !== numbers - 1) {
+                        result += x + '; ';
+                    } else {
+                        result += x + '.';
+                    }
+                    x++;
+                    count++;
+                    break;
+                }
+            }
+        }
+    }
+
+  document.write(result);
+</script>
+</body>
+</html>

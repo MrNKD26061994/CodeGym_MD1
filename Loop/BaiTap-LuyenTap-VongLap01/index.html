@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<button onclick="doanSo()" id="btnPlay">Chơi</button>
+<br>
+
+<script>
+  // Bài 1
+  for(let i = 0; i < 100; i++) {
+    console.log(i+1);
+    if(i+1 === 99) {
+      alert("Đã hoàn thành");
+      break;
+    }
+  }
+
+  // Bài 2
+  let tex = "Nhập nhiệt độ:";
+  while (true) {
+      let numbers = +prompt(tex);
+      if(numbers >= 100) {
+          tex = 'Nhiệt độ quá cao yêu cầu nhập lại: ';
+      } else if(numbers <= 20) {
+          tex = 'Nhiệt độ quá thấp yêu cầu nhập lại: ';
+      } else {
+          document.write('Nhiệt độ vừa nhập là: ' + numbers + '<br />');
+          break;
+      }
+  }
+
+  // Bài 3
+  let arrayF20 = fibonacci(20);
+  document.write(arrayF20 + '<br />')
+
+  // Bài 4
+  let x1 =1; x2 =1;
+  while(true) {
+      let temp = x1 + x2;
+      if(temp % 5 === 0){
+          document.write("Số fibo đầu tiên chia hết cho 5 là:  " + temp + '<br />')
+          break;
+      }
+      x1 = x2;
+      x2 = temp;
+  }
+
+  // Bài 5
+  let result5 = 0;
+  for (let i = 0; i < arrayF20.length; i++) {
+      result5 += arrayF20[i];
+  }
+  document.write("Tổng các 20 số fabonacci đầu tiên là: " + result5 + '<br />');
+
+  // Bài 6
+  let result6 = 0;
+  for(let i = 1; i <= 30; i++) {
+      result6 += i*7;
+  }
+  document.write("Tổng 30 số chia hết cho 7 đầu tiên là: " + result6 + '<br />');
+
+  // Bài 7
+  for(let i = 1; i <= 100; i++) {
+      if(i%3===0 && i%5===0){
+          document.write('FizzBuzz; ');
+      } else if(i%3===0) {
+          document.write('Fizz; ');
+      }else if(i%5===0) {
+          document.write('Buzz; ');
+      } else {
+          document.write(i + '; ')
+      }
+  }
+
+  // Bài 8
+  function doanSo() {
+      let number = +prompt("Bạn đoán số trong khoảng nào: ");
+      let numberOK = Math.floor(Math.random() * number);
+      for(let i = 0; i < 4; i++) {
+          let numberCheck = +prompt("Mời bạn chọn số: ");
+          if (i === 3) {
+              alert("Bạn đã hết lần đoán");
+              break;
+          }
+          if(numberCheck < numberOK) {
+              alert("Số của bạn đoán nhỏ hơn");
+          } else if(numberCheck > numberOK) {
+              alert("Số của bạn đoán lớn hơn");
+          } else {
+              document.write('Bạn đã đoán đúng số');
+              break;
+          }
+      }
+  }
+  function fibonacci(n) {
+      let arrayF = [1, 1];
+      if(n === 1) {
+          return [1];
+      } else if(n === 2) {
+          return [1, 1]
+      } else {
+          let temp1 = 1, temp2 = 1;
+          for(let i = 3; i <= n; i++) {
+              let temp = temp1 + temp2;
+              arrayF.push(temp);
+              temp1 = temp2;
+              temp2 = temp;
+          }
+          return arrayF;
+      }
+  }
+</script>
+</body>
+</html>
