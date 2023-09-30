@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function insertNumberToArray(array, x, index) {
+            if(index < 0 || index > array.length) {
+                return array;
+            } else {
+                let temp = array[index];
+                array[index] = x;
+                let len = array.length + 1;
+                for (let i = index + 1; i < len; i++) {
+                    let temp1 = array[i];
+                    array[i] = temp;    
+                    temp = temp1;
+                }
+                return array;
+            }
+        }
+        let a = [2,4,6,3,7,9];
+        insertNumberToArray(a, 255, 3);
+        console.log(a);
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500" style="border: 1px solid #333333;"></canvas>
+    
+    <script>
+        class Circle {
+            x;
+            y;
+            r;
+            color;
+
+            constructor(x, y, r, color){
+                this.x = x;
+                this.y = y;
+                this.r = r;
+                this.color = color;
+                
+            }
+
+            render() {
+                let canvas = document.getElementById("myCanvas");
+                let ctx = canvas.getContext('2d');
+                ctx.beginPath();
+                // ctx.fillRect(this.x, this.y, this.width, this.color);
+                ctx.arc(this.x, this.y, this.r, 0, 2* Math.PI)
+                ctx.fillStyle = this.color;
+                ctx.fill()
+            }
+        }
+
+        let res = new Circle(50, 50, 80, '#000000');
+        res.render();
+    </script>
+</body>
+</html>

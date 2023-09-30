@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumOfListPrime(x) {
+            let sum = 0
+            for (let i = 0; i <= x; i++) {
+                if(checkSNT(i) === false) {
+                    sum += i;
+                }
+            }
+            return sum
+        }
+
+        function checkSNT(x) {
+            let flag = false;
+            if(x <= 1){
+                return true;
+            }
+            if(x === 2) {
+                return false;
+            } else {
+                for (let i = 2; i < x; i++) {
+                    if(x % i === 0){
+                        flag = true;
+                    }
+                }
+                return flag;
+            }
+        }
+
+        console.log(sumOfListPrime(11));
+    </script>
+</body>
+</html>
