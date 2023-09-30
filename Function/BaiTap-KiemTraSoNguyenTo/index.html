@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let number;
+    do {
+        if (number >= 10000) {
+            alert("Số yêu cầu nhỏ hơn 10000")
+        } else if(number <= 1) {
+            alert("Số yêu cầu lớn hơn 1")
+        }
+        number = +prompt("Nhập số cần kiểm tra");
+    } while (number >= 10000 || number <= 1)
+
+    if(isPrime(number) === 0) {
+        document.write(`<h1>Số ${number} là số nguyên tố.</h1>`)
+    } else {
+        document.write(`<h1>Số ${number} là không là số nguyên tố.</h1>`)
+    }
+    function isPrime(number) {
+        let flag = 0;
+        for (let i = 2; i < Math.sqrt(number); i++) {
+            if(number % i === 0) {
+                flag = 1;
+                return flag;
+            }
+        }
+        return flag;
+    }
+</script>
+</body>
+</html>

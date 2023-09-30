@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // Bài 1
+  function mySquare(num) {
+    return num * num;
+  }
+  let num = +prompt("Nhập số: ");
+  document.write(`Bình phương của ${num} là ${mySquare(num)} <br />`);
+
+  // Bài 2
+  function getPerimeter(r) {
+    return 2 * r * Math.PI;
+  }
+
+  function getAcreage(r) {
+    return r * r * Math.PI;
+  }
+  function getPerimeterAcreage(r) {
+    document.write(`Chu vi của đường tròn bán kính = ${num} là: ${getPerimeter(num)} <br />`);
+    document.write(`Diện tích của đường tròn bán kính = ${num} là: ${getAcreage(num)} <br />`);
+  }
+  let r = +prompt("Nhập bán kính: ");
+  getPerimeterAcreage(r);
+
+  // Bài 3
+  function factorial(num) {
+    let result = 1;
+    for (let i = 2; i <= num; i++) {
+      result *= i;
+    }
+    return result;
+  }
+  let n = +prompt("Nhập số cần tính giai thừa: ");
+  document.write(`Giai thừa của ${num} là ${factorial(n)} <br />`);
+
+  // Bài 4
+  let str4 = +prompt("Nhập chuỗi cần kiểm tra: ");
+  function checkStr(str4){
+    if(isNaN(str4)) {
+      return false;
+    }
+    return true;
+  }
+  document.write(checkStr(str4) + '<br />')
+
+  // Bài 5
+  let n1 = +prompt("Nhập số thứ nhất: ");
+  let n2 = +prompt("Nhập số thứ hai: ");
+  let n3 = +prompt("Nhập số thứ ba: ");
+  document.write(`Số nhỏ nhất trong 3 số ${n1}, ${n2}, ${n3} là: ${min(n1,n2,n3)}<br />`);
+  function min(n1, n2, n3) {
+      if (n1 < n2) {
+          if(n1 < n3) {
+              return n1;
+          } else {
+              return  n3;
+          }
+      }else {
+          if (n2 < n3){
+              return n2;
+          } else {
+              return n3;
+          }
+      }
+  }
+
+  // Bài 6
+  let number = +prompt("Nhập số: ");
+  if(number === 0) {
+      document.write(`Số 0 không phải là số nguyên dương cũng như số nguyên âm<br/>`);
+  } else if(checkZ(number)) {
+      document.write(`Số ${number} là số nguyên dương<br/>`);
+  } else {
+      document.write(`Số ${number} là số nguyên âm<br/>`);
+  }
+  function checkZ(number) {
+      if(number > 0){
+          return true;
+      } else {
+          return false
+      }
+  }
+
+  // Bài 7
+  let a = 12;
+  let b = 20;
+  let temp = a;
+  a = b;
+  b = temp;
+  document.write(`<br />${a}; ${b}<br />`);
+
+  // Bài 8
+  let arr = [21, 54, 2];
+  document.write(myReverse(arr))
+  document.write('<br />')
+  function myReverse(array) {
+      let lengthA = array.length;
+      for (let i = 0; i < Math.floor(lengthA/2); i++) {
+          let temp = array[i];
+          array[i] = array[lengthA - 1 - i];
+          array[lengthA - 1 - i] = temp;
+      }
+      return array;
+  }
+
+  // Bài 9
+  let array = ['f','g','e','ư','d','f','c','s','f','ư','f'];
+  document.write(searchAndCount(array, 'f'));
+  function searchAndCount(arr, char){
+      let flag = 0;
+      for (let i = 0; i < arr.length; i++) {
+          if(arr[i] === char) {
+              flag += 1;
+          }
+      }
+      if(flag === 0) {
+          return -1;
+      } else {
+          return flag;
+      }
+  }
+</script>
+</body>
+</html>
