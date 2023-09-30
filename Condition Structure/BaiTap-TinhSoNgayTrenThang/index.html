@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" name="month" id="month"/>
+    <input type="submit" value="Tính số ngày" id="search" />
+    <h1 id="result"></h1>
+<script>
+    let btnSearch = document.getElementById('search');
+    let elementMonth = document.getElementById('month');
+    let result = document.getElementById('result');
+    btnSearch.addEventListener('click', search);
+    function search() {
+        let month = +elementMonth.value;
+
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                result.innerHTML = "Thang " + month + ' có 31 ngày.';
+                break;
+            case 2:
+                result.innerHTML = "Thang 2 có 28 hoặc 29 ngày";
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                result.innerHTML = "Thang " + month + ' có 30 ngày.';
+                break;
+            default:
+                result.innerHTML = "Tháng phải trong khoảng từ 1 - 12";
+                break;
+        }
+    }
+</script>
+</body>
+</html>

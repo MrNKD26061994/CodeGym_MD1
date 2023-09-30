@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .switch {
+      width: 70px;
+      height: 20px;
+      appearance: none;
+      background-color: #333;
+      border-radius: 12px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: inset 0px 0px 16px rgba(0,0,0,.3);
+    }
+
+    .switch::before {
+      content: '';
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      background: #eeeeee;
+      border-radius: 50%;
+      top: -5px;
+      box-shadow: inset 0px 0px 6px rgba(0,0,0,.3);
+    }
+
+    #blue:checked, #blue:checked::before {
+      background: blue;
+    }
+    #green:checked, #green:checked::before {
+      background: green;
+    }
+    #red:checked, #red:checked::before {
+      background: red;
+    }
+
+    .switch:checked::before {
+      left: 40px;
+    }
+  </style>
+</head>
+<body onload="main()">
+<table>
+  <tr>
+    <td>
+      <input type="checkbox" name="checkbox" id="green" class="switch"><span>GOOD</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="checkbox" name="checkbox" id="blue" class="switch"><span>CHEAP</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="checkbox" name="checkbox" id="red" class="switch"><span>FAST</span>
+    </td>
+  </tr>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
